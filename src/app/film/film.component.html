@@ -1,0 +1,32 @@
+<div class="flex-container">
+  <div *ngFor="let film of data" class="dataFilm">
+    <div class="descFilm">
+      <div class="primaryTitle">{{ getPrimaryTitle(film) }}</div>
+      <div class="originalTitle">{{ getOriginalTitle(film) }}</div>
+      <div class="block3">
+        <table>
+          <tr class="entete">
+            <td>ID</td>
+            <td>Minutes</td>
+            <td>Start Year</td>
+            <td>End Year</td>
+            <td>Is Adult</td>
+            <td>Genres</td>
+          </tr>
+          <tr class="value">
+            <td>{{ getTconst(film) }}</td>
+            <td>{{ getRuntimeMinutes(film) }}</td>
+            <td>{{ getStartYear(film) }}</td>
+            <td>{{ getEndYear(film) }}</td>
+            <td>{{ getIsAdult(film) }}</td>
+            <td>{{ getGenres(film) }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div>
+      <img class="icon_poster" src="../../assets/icons/icon_poster.svg" />
+    </div>
+    <br />
+  </div>
+</div>
